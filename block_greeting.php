@@ -26,7 +26,11 @@
  * Block greeting definition.
  */
 class block_greeting extends block_base {
-    #[\Override]
+    // Moodle's block_base declares no init() of its own — #[\Override] would fatal
+    // (PHP 8.3+ requires a real parent method to override; there isn't one here).
+    /**
+     * Set the block title.
+     */
     public function init(): void {
         $this->title = get_string('pluginname', 'block_greeting');
     }
