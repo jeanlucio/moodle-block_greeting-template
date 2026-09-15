@@ -37,7 +37,9 @@ class block_greeting extends block_base {
             return $this->content;
         }
         $this->content = new stdClass();
-        // Section 8 of SCOPE.md: render the 'greeting' string through a Mustache template here.
+        // Section 4 of SCOPE.md: get the message from \block_greeting\local\greeting_text,
+        // render it through a Mustache template (section 8), and register the AMD module
+        // (block_greeting/greeting) here.
         $this->content->text = '';
         $this->content->footer = '';
         return $this->content;

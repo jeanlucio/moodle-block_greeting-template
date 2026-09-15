@@ -21,6 +21,7 @@
  * @copyright  2026 Jean Lúcio
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @covers     \block_greeting
+ * @covers     \block_greeting\local\greeting_text
  */
 
 namespace block_greeting;
